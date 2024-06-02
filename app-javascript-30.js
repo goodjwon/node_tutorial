@@ -72,8 +72,8 @@ function scopeTest() {
     console.log('문제 11 (함수 내부):', localVariable);  // 출력: I am local
 }
 
-scopeTest();
-// console.log(localVariable);  // 오류 발생: localVariable is not defined
+let scop2 = scopeTest;
+console.log('11 문제 : ', scop2.localVariable);  // 오류 발생: localVariable is not defined
 
 // 문제 12: let을 사용하여 변수를 선언하고, 블록 범위 내에서 다른 값을 할당한 후, 범위 밖에서의 값을 출력하세요.
 let blockScopeVariable = 'Outside Block';
@@ -156,6 +156,7 @@ console.log('문제 21 (호이스팅 후):', hoistedVar);  // 출력: This is ho
 // 문제 22: 클로저(closure)를 사용하여 변수를 은닉하는 방법을 설명하고 예제를 작성하세요.
 function createCounter() {
     let count = 0;
+	console.log('count : ', count)
 
     return function() {
         count++;
@@ -163,9 +164,11 @@ function createCounter() {
     };
 }
 
+
 let counter = createCounter();
 console.log('문제 22 (1):', counter());  // 출력: 1
 console.log('문제 22 (2):', counter());  // 출력: 2
+console.log('문제 22 (3):', counter());  // 출력: 3
 
 // 문제 23: 즉시 실행 함수 표현식(IIFE)을 사용하여 변수를 캡슐화하는 방법을 보여주세요.
 (function() {
