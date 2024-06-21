@@ -122,6 +122,28 @@ const sortByLength = (arr) => {
     return arr.sort((a, b) => a.length - b.length);
 };
 
+
+function sortStringsByLength2(strings) {
+    for (let i = 0; i < strings.length; i++) {
+        for (let j = 0; j < strings.length - 1; j++) {
+            if (strings[j].length > strings[j + 1].length) {
+                // Swap the strings
+                let temp = strings[j];
+                strings[j] = strings[j + 1];
+                strings[j + 1] = temp;
+            }
+        }
+    }
+    return strings;
+}
+
+const mixedStrings2 = ['a', 'abcd', 'abc', 'ab'];
+const sortedStrings2 = sortStringsByLength2(mixedStrings2);
+console.log(sortedStrings2);
+
+
+
+
 // 문제 14: 주어진 숫자 배열에서 중복된 숫자를 제거하는 함수
 const removeDuplicates = (arr) => {
     const uniqueNumbers = [];
