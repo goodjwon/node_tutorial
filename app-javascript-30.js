@@ -250,3 +250,7 @@ let name2 = 'John';
 let age3 = 25;
 let greeting2 = `안녕하세요, 제 이름은 ${name2}이고 나이는 ${age3}살입니다.`;
 console.log('문제 30:', greeting2);  // 출력: 안녕하세요, 제 이름은 John이고 나이는 25살입니다.
+
+
+
+
