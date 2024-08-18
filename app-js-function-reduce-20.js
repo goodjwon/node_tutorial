@@ -4,6 +4,7 @@ const mostFrequent = numbers1.reduce((acc, num) => {
     acc[num] = (acc[num] || 0) + 1;
     return acc;
 }, {});
+
 const mostFrequentElement = Object.keys(mostFrequent).reduce((a, b) => 
     mostFrequent[a] > mostFrequent[b] ? a : b);
 console.log(`문제 1: 가장 많이 등장한 요소: ${mostFrequentElement}`);
