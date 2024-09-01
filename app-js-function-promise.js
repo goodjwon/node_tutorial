@@ -82,3 +82,18 @@ getDate().then((date)=>{
 	const name = date.name;
 	console.log(`${name}님 안녕하세요?`)
 });
+
+function getDataError(){
+	const promise4 = new Promise((resolve, reject)=>{
+		setTimeout(()=>{
+			const data = null
+			if(data) {
+				console.log('Successfully Network request');
+				resolve(data);
+			} else {
+				reject(new Error(`Network request failed`));
+			}
+		}, 1000);
+	})
+	
+}

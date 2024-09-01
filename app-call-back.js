@@ -40,9 +40,9 @@ function login(username, callback){
 	}, 1000);
 }
 
-// login('Mike', (username)=>{
-// 	console.log(`${username} 님이 로그인 했습니다.`);
-// });
+login('Mike', (username)=>{
+	console.log(`${username} 님이 로그인 했습니다.`);
+});
 
 // 2. 장바구니 넣기
 function addCart(item, callback){
